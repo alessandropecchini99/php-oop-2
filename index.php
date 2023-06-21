@@ -1,18 +1,10 @@
 <?php
+// INCLUDO TUTTE LE CLASSI ED IL DATABASE
 include __DIR__ . '/classes/category.php';
 include __DIR__ . '/classes/product.php';
 include __DIR__ . '/classes/food.php';
 include __DIR__ . '/classes/toy.php';
 include __DIR__ . '/db.php';
-
-// foreach ($arrFoods as $food) {
-//     echo $food->name;
-// }
-
-// foreach ($arrToys as $toy) {
-//     echo $toy->name;
-// }
-
 ?>
 
 
@@ -29,6 +21,8 @@ include __DIR__ . '/db.php';
 <body>
 
     <div class="container">
+
+        <!-- CARD DEL CIBO -->
         <div class="food">
             <?php foreach ($arrFoods as $food) { ?>
                 <div class="food-card">
@@ -44,6 +38,7 @@ include __DIR__ . '/db.php';
             <?php } ?>
         </div>
 
+        <!-- CARD DEI GIOCHI -->
         <div class="toy">
             <?php foreach ($arrToys as $toy) { ?>
                 <div class="toy-card">
@@ -58,6 +53,7 @@ include __DIR__ . '/db.php';
                 </div>
             <?php } ?>
         </div>
+
     </div>
 
 </body>

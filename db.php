@@ -1,5 +1,6 @@
 <?php
 
+// ARRAY DATI DEI PRODOTTI
 $products = [
     'food' => [
         [
@@ -46,6 +47,10 @@ $products = [
         ],
     ],
 ];
+
+
+
+// CREO GLI OGGETTI
 
 $arrFoods = [];
 foreach ($products['food'] as $food) {
