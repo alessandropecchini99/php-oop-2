@@ -4,10 +4,10 @@
 class Product extends Category
 {
     // ISTANZE
-    public string $name;
-    public string $description;
-    public string $image;
-    public string $availability;
+    protected string $name;
+    protected string $description;
+    protected string $image;
+    protected string $availability;
     protected int $price;
 
     // COSTRUTTORE
@@ -23,6 +23,26 @@ class Product extends Category
 
 
     // FUNZIONI PER COMUNICARE ALL'ESTERNO I DATI PRIVATI
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function getAvailability()
+    {
+        return $this->availability;
+    }
+
     public function getPrice()
     {
         return $this->price;
