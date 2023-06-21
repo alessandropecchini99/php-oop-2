@@ -1,8 +1,7 @@
 <?php
 
-class Product
+class Product extends Category
 {
-    public string $category;
     public string $name;
     public string $description;
     public string $image;
@@ -11,7 +10,7 @@ class Product
 
     public function __construct($categoria, $nome, $descrizione, $img, $disponibilità, $prezzo)
     {
-        $this->category = $categoria;
+        parent::__construct($categoria);
         $this->name = $nome;
         $this->description = $descrizione;
         $this->image = $img;
@@ -19,8 +18,8 @@ class Product
         $this->price = $prezzo;
     }
 
-    public function data()
+    public function getPrice()
     {
-        return $this->category . ' - ' . $this->name . ' - ' . $this->description . ' - ' . $this->image . ' - ' . $this->availability . ' - ' . $this->price;
+        return $this->price;
     }
 }
