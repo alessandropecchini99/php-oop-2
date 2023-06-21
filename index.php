@@ -22,36 +22,32 @@ include __DIR__ . '/db.php';
 
     <div class="container">
 
-        <!-- CARD DEL CIBO -->
-        <div class="food">
-            <?php foreach ($arrFoods as $food) { ?>
-                <div class="food-card">
-                    <h1> Categoria: <?= $food->getCategory() ?> </h1>
-                    <h2> <?= $food->getName() ?> </h2>
-                    <img src="<?= $food->getImage() ?>" alt="food">
-                    <h3> <?= $food->getDescription() ?> </h3>
-                    <h4> Gusto: <?= $food->getTaste() ?> </h4>
-                    <h4> Peso: <?= $food->getWeight() ?>KG </h4>
-                    <p> <?= $food->getAvailability() ?> </p>
-                    <h2> <?= $food->getPrice() ?>€ </h2>
-                </div>
-            <?php } ?>
+        <!-- CARD CANE -->
+        <h1>DOG CATEGORY</h1>
+        <div class="cards">
+
+            <?php foreach ($dogFoods as $food) {
+                echo $food->printData();
+            } ?>
+
+            <?php foreach ($dogToys as $toy) {
+                echo $toy->printData();
+            } ?>
+
         </div>
 
-        <!-- CARD DEI GIOCHI -->
-        <div class="toy">
-            <?php foreach ($arrToys as $toy) { ?>
-                <div class="toy-card">
-                    <h1> Categoria: <?= $toy->getCategory() ?> </h1>
-                    <h2> <?= $toy->getName() ?> </h2>
-                    <img src="<?= $toy->getImage() ?>" alt="toy">
-                    <h3> <?= $toy->getDescription() ?> </h3>
-                    <h4> Materiale: <?= $toy->getMaterial() ?> </h4>
-                    <h4> Dimensione: <?= $toy->getDimension() ?> </h4>
-                    <p> <?= $toy->getAvailability() ?> </p>
-                    <h2> <?= $toy->getPrice() ?>€ </h2>
-                </div>
-            <?php } ?>
+        <!-- CARD GATTO -->
+        <h1 style="margin-top: 2em;">CAT CATEGORY</h1>
+        <div class="cards">
+
+            <?php foreach ($catFoods as $food) {
+                echo $food->printData();
+            } ?>
+
+            <?php foreach ($catToys as $toy) {
+                echo $toy->printData();
+            } ?>
+
         </div>
 
     </div>

@@ -23,19 +23,23 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 3em;
 }
 
-.food,
-.toy {
+.container > h1:not(.cards) {
+  margin-bottom: 1em;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.cards {
   display: flex;
   gap: 3em;
 }
 
-.food-card,
-.toy-card {
+.card {
   background-color: white;
-  width: fit-content;
+  width: 270px;
   padding: 20px;
 
   border-radius: 20px;
